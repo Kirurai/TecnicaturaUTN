@@ -16,6 +16,9 @@ public class Uml1 {
      */
     public static void main(String[] args) {
         Usuario user = new Usuario(1, "Arthur", "Pendragon", 7, "KingArthur", "Britain");
+        
+        ContactoDomicilio direccion = new ContactoDomicilio(1, "Kings Boulevard 1");
+        ContactoTelefono
     }
     
 }
