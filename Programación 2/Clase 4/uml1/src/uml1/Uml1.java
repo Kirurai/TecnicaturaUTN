@@ -11,14 +11,16 @@ package uml1;
  */
 public class Uml1 {
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
         Usuario user = new Usuario(1, "Arthur", "Pendragon", 7, "KingArthur", "Britain");
         
         ContactoDomicilio direccion = new ContactoDomicilio(1, "Kings Boulevard 1");
-        ContactoTelefono
+        ContactoTelefono telefono = new ContactoTelefono(1, "007", "001");
+        ContactoTipo tipo = new ContactoTipo(1, "Cliente");
+        
+        Contacto c1 = New Contacto();
+        Contacto c2 = New Contacto();
     }
     
 }

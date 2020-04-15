@@ -18,7 +18,11 @@ public class Contacto extends Persona {
     
     public Contacto(int idPersona, String nombre, String apellido, int idContacto, ContactoTipo tipo){
         super(idPersona, apellido, nombre);
+        this.idContacto = idContacto;
         this.tipo = tipo;
+    }
+    public Contacto(){
+        
     }
     
     public int getIdContacto(){
