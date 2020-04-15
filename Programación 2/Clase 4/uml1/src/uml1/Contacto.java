@@ -38,6 +38,9 @@ public class Contacto extends Persona {
         return this.telefonos;
     }
     
+    public void setIdContacto(int id){
+        this.idContacto = id;
+    }
     public void setTipo(ContactoTipo tipo){
         this.tipo = tipo;
     }
