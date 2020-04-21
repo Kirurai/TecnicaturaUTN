@@ -5,7 +5,8 @@
  */
 package uml1;
 
-import java.util.*;
+import java.util.ArrayList;
+
 /**
  *
  * @author Miño Maurizio Nahuel <kd.maurii@gmail.com> A.K.A "Kirurai"
@@ -14,8 +15,11 @@ public class Usuario extends Persona{
     private int idUsuario;
     private String usuario;
     private String password;
-    private Vector <Contacto> contactos;
+    private ArrayList <Contacto> contactos = new ArrayList<>();
     
+    public Usuario (){
+        
+    }
     public Usuario(int IdPersona, String nombre, String apellido, int idUsuario, String usuario, String password){
         super(IdPersona, apellido, nombre);
         this.idUsuario = idUsuario;
@@ -32,7 +36,7 @@ public class Usuario extends Persona{
     public String getPassword(){
         return this.password;
     }
-    public Vector <Contacto> getContactos(){
+    public ArrayList <Contacto> getContactos(){
         return this.contactos;
     }
     
@@ -45,7 +49,7 @@ public class Usuario extends Persona{
     public void setPassword(String pw){
         this.password = pw;
     }
-    public void setContactos(Vector <Contacto> contactos){
+    public void setContactos(ArrayList <Contacto> contactos){
         this.contactos = contactos;
     }
     
