@@ -15,7 +15,28 @@ public class Uml2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        //Inicializando lo necesario
+        Fecha fecha = new Fecha (31, 2, 2020);
+        Producto prod1 = new Producto(101, "Oreo super chocolate", (float) 2.34);
+        Producto prod2 = new Producto(102, "Oreo mix chocolate - avellana", (float) 2.59);
+        Cliente clie = new Cliente(3141592, "Es pi");
+        Factura factura = new Factura( 'B', 1, fecha, clie, prod1);
+        
+        factura.addProducto(prod2);
+        
+        System.out.printf("Factura Tipo %s\n", factura.getTipo());
+        System.out.printf("N°     %d\n", factura.getNumero());
+        System.out.printf("Fecha: %d/%d/%d\n", factura.getFecha().getDia(), factura.getFecha().getMes(), factura.getFecha().getAnio());
+        System.out.printf("Razon Social: %s\n", factura.getCliente().getRazonSocial());
+        System.out.printf("-------------------------------------------------");
+        for (int i = 0;   i< factura.getProductos().size(); i++){
+            System.out.printf("Codigo Producto: %d\n", factura.getProductos().get(0).getCodigo());
+            System.out.printf("Descripcion: %s\n", factura.getProductos().get(0).getDescripcion());
+            System.out.printf("Precio: $%f\n", factura.getProductos().get(0).getPrecio());
+        }
+        System.out.printf("-------------------------------------------------");
+        System.out.printf("Total: $%f\n"+factura.getTotal());
+        
     }
     
 }

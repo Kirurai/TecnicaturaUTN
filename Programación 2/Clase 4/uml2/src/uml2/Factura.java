@@ -14,14 +14,15 @@ import java.util.ArrayList;
 public class Factura extends Comprobante {
     private float total;
     private Cliente cliente;
-    private ArrayList <Producto> producto = new ArrayList <>();
+    private ArrayList <Producto> productos = new ArrayList <>();
     
     public Factura(){
         this.total = 0;
     }
-    public Factura(char tipo, int numero, Fecha fecha, float total){
+    public Factura(char tipo, int numero, Fecha fecha, Cliente cliente, Producto producto){
         super(tipo, numero, fecha);
-        this.total = total;
+        this.cliente = cliente;
+        this.productos.add(producto);
     }
 
     public float getTotal() {
@@ -30,8 +31,8 @@ public class Factura extends Comprobante {
     public Cliente getCliente() {
         return cliente;
     }
-    public ArrayList <Producto> getProducto() {
-        return producto;
+    public ArrayList <Producto> getProductos() {
+        return productos;
     }
 
     public void setTotal(float total) {
@@ -40,12 +41,17 @@ public class Factura extends Comprobante {
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
-    public void setProducto(ArrayList <Producto> producto) {
-        this.producto = producto;
+    public void setProductos(ArrayList <Producto> productos) {
+        this.productos= productos;
+        this.total = 0;
+        for (int i = 0; i < productos.size(); i++){
+            this.total += productos.get(i).getPrecio();
+        }
     }
 
     public void addProducto(Producto elemento){
-        this.producto.add(elemento);
+        this.productos.add(elemento);
+        this.total += elemento.getPrecio();
     }
     
     
