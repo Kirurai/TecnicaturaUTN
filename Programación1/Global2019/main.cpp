@@ -48,7 +48,7 @@ void global(){
   inFile.open("datos.txt"); //lectura de archivo
 	if (!inFile) {
 		cout << "No se puede abrir el archivo denominado datos.txt";
-		exit(1); // terminar con error
+		exit(1); // term  inar con error
   }
 
 

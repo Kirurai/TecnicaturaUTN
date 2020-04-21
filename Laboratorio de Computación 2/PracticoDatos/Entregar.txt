@@ -1,0 +1,10 @@
+Estela	12
+German	13
+Juan	25
+Leonel	30
+Luis	18
+Maria	32
+Maria	80
+Martin	45
+Raul	21
+Sonia	14
