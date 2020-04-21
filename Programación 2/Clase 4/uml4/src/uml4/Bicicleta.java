@@ -17,6 +17,9 @@ public class Bicicleta extends Vehiculo {
         super(ruedas, duenio);
     }
     
+    public String tipoMovil(){
+        return "bicicleta";
+    }
     public double precio(){
         return 2.0;
     }

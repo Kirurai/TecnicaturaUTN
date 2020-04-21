@@ -12,7 +12,16 @@ package uml4;
 public class Moto extends Vehiculo implements Motor {
     
     
+    public Moto(){
+        
+    }
+    public Moto(int ruedas, String duenio){
+        super(ruedas, duenio);
+    }
     
+    public String tipoMovil(){
+        return "moto";
+    }
     public String tipo(){
         return "Tiene un motor de moto";
     }

@@ -21,6 +21,7 @@ public abstract class Vehiculo {
         this.duenio = duenio;
     }
     
+    public abstract String tipoMovil();
     public abstract double precio();
     public abstract double velocidadMaxima();
     public abstract int getRuedas();
