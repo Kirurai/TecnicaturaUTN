@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * @author Miño Maurizio Nahuel <kd.maurii@gmail.com> A.K.A "Kirurai"
  */
 public class Cliente extends Persona implements EstadoCuenta {
-    public ArrayList <TarjetaCredito> creditCard;
+    public ArrayList <TarjetaCredito> creditCard = new ArrayList<>();
     
     public Cliente(){
         
@@ -24,6 +24,9 @@ public class Cliente extends Persona implements EstadoCuenta {
     }
     public void setCreditCard(ArrayList<TarjetaCredito> creditCards){
         this.creditCard = creditCards;
+    }
+    public void addCreditCard(TarjetaCredito cc){
+        this.creditCard.add(cc);
     }
     
     //Overrides
