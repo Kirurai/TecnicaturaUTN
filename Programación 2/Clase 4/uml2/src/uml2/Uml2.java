@@ -28,14 +28,14 @@ public class Uml2 {
         System.out.printf("N°     %d\n", factura.getNumero());
         System.out.printf("Fecha: %d/%d/%d\n", factura.getFecha().getDia(), factura.getFecha().getMes(), factura.getFecha().getAnio());
         System.out.printf("Razon Social: %s\n", factura.getCliente().getRazonSocial());
-        System.out.printf("-------------------------------------------------");
+        System.out.printf("-------------------------------------------------\n");
         for (int i = 0;   i< factura.getProductos().size(); i++){
             System.out.printf("Codigo Producto: %d\n", factura.getProductos().get(0).getCodigo());
             System.out.printf("Descripcion: %s\n", factura.getProductos().get(0).getDescripcion());
-            System.out.printf("Precio: $%f\n", factura.getProductos().get(0).getPrecio());
+            System.out.printf("Precio: $%.2f\n", factura.getProductos().get(0).getPrecio());
         }
-        System.out.printf("-------------------------------------------------");
-        System.out.printf("Total: $%f\n"+factura.getTotal());
+        System.out.printf("-------------------------------------------------\n");
+        System.out.printf("Total: $%.2f\n", factura.getTotal());
         
     }
     
