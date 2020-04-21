@@ -39,11 +39,4 @@ public class Uml4 {
         }
         
     }
-    public static void imprimirVehiculo(Vehiculo vehiculo){
-        
-        System.out.printf("El/La %s pertenece a %s", vehiculo.tipoMovil(), vehiculo.getDuenio());
-        System.out.printf("Ruedas: "+vehiculo.getRuedas());
-        System.out.printf("Precio: "+vehiculo.precio());
-        System.out.printf("Velocidad maxima: "+vehiculo.velocidadMaxima());
-    }
 }
