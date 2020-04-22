@@ -9,32 +9,22 @@ package uml5;
  *
  * @author Miño Maurizio Nahuel <kd.maurii@gmail.com> A.K.A "Kirurai"
  */
-public class Rueda {
-    private String tipo;
-    private double presion;
-
-    public Rueda() {
-        
+public class FordFalcon extends Auto{
+    public static String tipo = "Ford Falcon";
+    
+    public FordFalcon() {
     }
-    public Rueda(String tipo, double presion) {
-        this.tipo = tipo;
-        this.presion = presion;
+
+    public FordFalcon(double velocidadPromedio, int velocidadMaxima) {
+        super(velocidadPromedio, velocidadMaxima);
     }
 
     public String getTipo() {
         return tipo;
     }
-    public double getPresion() {
-        return presion;
-    }
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-    public void setPresion(double presion) {
-        this.presion = presion;
-    }
-    
-    
     
 }

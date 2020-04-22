@@ -5,14 +5,16 @@
  */
 package uml5;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Miño Maurizio Nahuel <kd.maurii@gmail.com> A.K.A "Kirurai"
  */
-public class Vehiculo implements Desplazable {
+public abstract class Vehiculo implements Desplazable {
     private double velocidadPromedio;
     private int velocidadMaxima;
-    private Rueda ruedas;
+    private ArrayList<Rueda> ruedas = new ArrayList<>();
     
     public Vehiculo(){
         
@@ -28,7 +30,7 @@ public class Vehiculo implements Desplazable {
     public int getVelocidadMaxima() {
         return velocidadMaxima;
     }
-    public Rueda getRuedas() {
+    public final ArrayList<Rueda> getRuedas() {
         return ruedas;
     }
 
@@ -38,18 +40,14 @@ public class Vehiculo implements Desplazable {
     public void setVelocidadMaxima(int velocidadMaxima) {
         this.velocidadMaxima = velocidadMaxima;
     }
-    public void setRuedas(Rueda ruedas) {
+    public void setRuedas(ArrayList<Rueda> ruedas) {
         this.ruedas = ruedas;
     }
     
     @Override
-    public void esquivarObstaculo(){
-        
-    }
+    public  abstract void esquivarObstaculo();
     
-    public void romperInercia(){
-        
-    }
+    public abstract void romperInercia();
     
     
     

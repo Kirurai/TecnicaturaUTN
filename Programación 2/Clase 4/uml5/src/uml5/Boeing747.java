@@ -11,6 +11,7 @@ package uml5;
  */
 public class Boeing747 extends Vehiculo{
     private int viajes;
+    private String tipo = "Boeing 747";
     
     public Boeing747(){
         
@@ -27,14 +28,34 @@ public class Boeing747 extends Vehiculo{
     public void setViajes(int viajes){
         this.viajes = viajes;
     }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+    
     
     public void despegar(){
-        
+        System.out.println("El Avión ha despegado");
     }
     public void aterrizar(){
-        
+        System.out.println("El Avión ha aterrizado");
     }
     public void agregarViaje(){
         this.viajes++;
+    }
+
+    @Override
+    public void esquivarObstaculo() {
+        
+    }
+
+    @Override
+    public void romperInercia() {
+        this.setVelocidadPromedio(0);
+        System.out.println("La inercia del auto ha sido reducida a 0 respecto tierra!.. EL AVION ESTÁ EN CAIDA LIBRE");
     }
 }

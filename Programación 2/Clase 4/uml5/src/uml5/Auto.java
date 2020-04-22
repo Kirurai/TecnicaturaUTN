@@ -12,6 +12,27 @@ package uml5;
 public class Auto extends Vehiculo {
     
     public Auto(){
-        getRuedas().setCantidad(4);
+        for (int i = 0; i < 4; i++){
+            getRuedas().add(new Rueda("auto", 32));
+        }
+    }
+    public Auto(double velocidadPromedio, int velocidadMaxima){
+        super(velocidadPromedio, velocidadMaxima);
+        
+        for (int i = 0; i < 4; i++){
+            getRuedas().add(new Rueda("auto", 32));
+        }
+        
+    }
+    
+    @Override
+    public void esquivarObstaculo(){
+        
+    }
+
+    @Override
+    public void romperInercia() {
+        this.setVelocidadPromedio(0);
+        System.out.println("La inercia del auto ha sido reducida a 0 respecto tierra!");
     }
 }

@@ -9,32 +9,25 @@ package uml5;
  *
  * @author Miño Maurizio Nahuel <kd.maurii@gmail.com> A.K.A "Kirurai"
  */
-public class Rueda {
-    private String tipo;
-    private double presion;
+public class HondaXR25 extends Moto{
+    private String tipo = "Honda XR25";
 
-    public Rueda() {
-        
+    public HondaXR25() {
     }
-    public Rueda(String tipo, double presion) {
-        this.tipo = tipo;
-        this.presion = presion;
+
+    public HondaXR25(double velocidadPromedio, int velocidadMaxima) {
+        super(velocidadPromedio, velocidadMaxima);
     }
 
     public String getTipo() {
         return tipo;
     }
-    public double getPresion() {
-        return presion;
-    }
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-    public void setPresion(double presion) {
-        this.presion = presion;
+    
+    public void esquivarObstaculo(int metros){
+        System.out.printf("Se pueden esquivar obstaculos desde los %d m ", metros);
     }
-    
-    
-    
 }
