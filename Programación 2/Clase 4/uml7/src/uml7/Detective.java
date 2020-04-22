@@ -13,6 +13,7 @@ import java.util.ArrayList;
  */
 public class Detective extends Persona{
     private String numeroPlaca;
+    private ArrayList<Mafioso> investigacion = new ArrayList<>();
 
     public Detective() {
         
@@ -31,8 +32,15 @@ public class Detective extends Persona{
         this.numeroPlaca = numeroPlaca;
     }
     
+    public ArrayList<Mafioso> getInvestigacion(){
+        return this.investigacion;
+    }
+    public void setInvesticion(ArrayList<Mafioso> investigacion){
+        this.investigacion = investigacion;
+    }
+    
     public boolean investigarMafioso(Mafioso mafioso){
-        if (mafioso.investigar()){
+        if (this.investigacion.contains(mafioso)){
             System.out.printf("%s se encuentra bajo investigación \n", mafioso.getNombre());
             return true;
         }else {
